@@ -1,2 +1,2 @@
 # codbex-platform
-The platform project
+The `codbex` platform project
