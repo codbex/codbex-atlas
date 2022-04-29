@@ -15,6 +15,7 @@
 
 	<modules>
 		<module>community</module>
+		<module>springboot</module>
 	</modules>
 
 	<build>
