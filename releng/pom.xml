@@ -14,8 +14,9 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>community</module>
-		<module>springboot</module>
+		<module>platform-all</module>
+		<module>platform-mini</module>
+		<module>platform-spring</module>
 	</modules>
 
 	<build>
