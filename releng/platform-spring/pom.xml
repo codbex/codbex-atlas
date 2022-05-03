@@ -282,7 +282,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<version>${spring.boot.version}</version>
 				<configuration>
-					<mainClass>org.eclipse.dirigible.services.spring.RestServiceApplication</mainClass>
+					<mainClass>com.codbex.platform.services.spring.RestServiceApplication</mainClass>
 				</configuration>
 				<executions>
 					<execution>

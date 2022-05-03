@@ -1,1 +1,1 @@
-java -jar ./target/dirigible-spring-boot-6.0.0-SNAPSHOT.jar
+java -jar ./target/codbex-platform-spring-0.1.0-SNAPSHOT.jar
