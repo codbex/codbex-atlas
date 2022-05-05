@@ -45,66 +45,131 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-core</artifactId>
-			<version>${logback.version}</version>
-			<scope>compile</scope>
+		    <groupId>ch.qos.logback</groupId>
+		    <artifactId>logback-core</artifactId>
+		    <version>${logback.version}</version>
+		    <scope>compile</scope>
 		</dependency>
 		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<version>${logback.version}</version>
-			<scope>compile</scope>
+		    <groupId>ch.qos.logback</groupId>
+		    <artifactId>logback-classic</artifactId>
+		    <version>${logback.version}</version>
+		    <scope>compile</scope>
+		</dependency>
+	
+		<!-- Commons -->
+		<dependency>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-commons-config</artifactId>
+		 	<version>${dirigible.version}</version>
 		</dependency>
 
-		<!-- Dirigible -->
+		<!-- API -->
+		<dependency>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-api</artifactId>
+		 	<version>${dirigible.version}</version>
+		</dependency>
+
+		<!-- Repository -->
+		<dependency>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-repository</artifactId>
+		 	<version>${dirigible.version}</version>
+		</dependency>
+		<dependency>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-repository-local</artifactId>
+		 	<version>${dirigible.version}</version>
+		</dependency>
+
+		<!-- Database -->
+		<dependency>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-database</artifactId>
+		 	<version>${dirigible.version}</version>
+		</dependency>
+		<dependency>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-database-h2</artifactId>
+		 	<version>${dirigible.version}</version>
+		</dependency>
+		<dependency>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-database-custom</artifactId>
+		 	<version>${dirigible.version}</version>
+		</dependency>
+
+		<!-- Core Services -->
+		<dependency>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-core</artifactId>
+		 	<version>${dirigible.version}</version>
+		</dependency>
+
+		<!-- Services -->
+		<dependency>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-services</artifactId>
+		 	<version>${dirigible.version}</version>
+		</dependency>
+
+		<!-- Engines -->
+		<dependency>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-engine</artifactId>
+		 	<version>${dirigible.version}</version>
+		</dependency>
+
+		<!-- MAIL -->
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-server-all</artifactId>
+			<artifactId>dirigible-mail</artifactId>
 			<version>${dirigible.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.eclipse.dirigible</groupId>
-					<artifactId>dirigible-ext-elasticsearch</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.eclipse.dirigible</groupId>
-					<artifactId>dirigible-ext-etcd</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.eclipse.dirigible</groupId>
-					<artifactId>dirigible-ext-rabbitmq</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.eclipse.dirigible</groupId>
-					<artifactId>dirigible-ext-redis</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.eclipse.dirigible</groupId>
-					<artifactId>dirigible-ext-spark</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.eclipse.dirigible</groupId>
-					<artifactId>dirigible-api-facade-elasticsearch</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.eclipse.dirigible</groupId>
-					<artifactId>dirigible-api-facade-etcd</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.eclipse.dirigible</groupId>
-					<artifactId>dirigible-api-facade-rabbitmq</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.eclipse.dirigible</groupId>
-					<artifactId>dirigible-api-facade-redis</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.eclipse.dirigible</groupId>
-					<artifactId>dirigible-api-facade-spark</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
+
+		<!-- IDE Plugins -->
+		<dependency>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-ide</artifactId>
+		 	<version>${dirigible.version}</version>
+		</dependency>
+		
+		<!-- Templating Core -->
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-templating-all</artifactId>
+			<version>${dirigible.version}</version>
+		</dependency>
+
+		<!-- Templates Plugins -->
+		<dependency>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-templates</artifactId>
+		 	<version>${dirigible.version}</version>
+		</dependency>
+
+		<!-- Resources Plugins -->
+		<dependency>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-resources</artifactId>
+		 	<version>${dirigible.version}</version>
+		</dependency>
+
+		<!-- External -->
+		<dependency>
+		  <groupId>javax.annotation</groupId>
+		  <artifactId>jsr250-api</artifactId>
+		  <version>${jsr250-api.version}</version>
+		</dependency>
+
+		<!-- External - Jetty -->
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-servlets</artifactId>
+			<version>${jetty.version}</version>
+		</dependency>
+		
 	</dependencies>
 
 	<properties>
