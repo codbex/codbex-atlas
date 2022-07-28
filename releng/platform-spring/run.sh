@@ -1,1 +1,1 @@
-java -jar ./target/codbex-platform-spring-0.1.0-SNAPSHOT.jar
+java -jar ./target/codbex-atlas-spring-0.1.0-SNAPSHOT.jar

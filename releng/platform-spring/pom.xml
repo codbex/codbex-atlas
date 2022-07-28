@@ -4,14 +4,14 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.codbex.platform</groupId>
-		<artifactId>codbex-platform-releng-parent</artifactId>
+		<groupId>com.codbex.atlas</groupId>
+		<artifactId>codbex-atlas-releng-parent</artifactId>
 		<version>0.1.0-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-	<name>codbex - platform - spring</name>
-	<artifactId>codbex-platform-spring</artifactId>
+	<name>codbex - atlas - spring</name>
+	<artifactId>codbex-atlas-spring</artifactId>
 	<version>0.1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
@@ -282,7 +282,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<version>${spring.boot.version}</version>
 				<configuration>
-					<mainClass>com.codbex.platform.services.spring.RestServiceApplication</mainClass>
+					<mainClass>com.codbex.atlas.services.spring.RestServiceApplication</mainClass>
 				</configuration>
 				<executions>
 					<execution>

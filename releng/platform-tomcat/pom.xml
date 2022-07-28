@@ -3,14 +3,14 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.codbex.platform</groupId>
-		<artifactId>codbex-platform-releng-parent</artifactId>
+		<groupId>com.codbex.atlas</groupId>
+		<artifactId>codbex-atlas-releng-parent</artifactId>
 		<version>0.1.0-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-	<name>codbex - platform - mini</name>
-	<artifactId>codbex-platform-mini</artifactId>
+	<name>codbex - atlas - tomcat</name>
+	<artifactId>codbex-atlas-tomcat</artifactId>
 	<version>0.1.0-SNAPSHOT</version>
 	<packaging>war</packaging>
 
@@ -120,6 +120,30 @@
 		 	<artifactId>dirigible-engine</artifactId>
 		 	<version>${dirigible.version}</version>
 		</dependency>
+		
+		<!-- CMS -->
+		<dependency>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-cms</artifactId>
+		 	<version>${dirigible.version}</version>
+		 	<exclusions>
+				<exclusion>
+					<groupId>org.eclipse.dirigible</groupId>
+					<artifactId>dirigible-cms-managed</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.eclipse.dirigible</groupId>
+					<artifactId>dirigible-cms-database</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		<!-- BPM -->
+		<dependency>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-bpm</artifactId>
+		 	<version>${dirigible.version}</version>
+		</dependency>
 
 		<!-- MAIL -->
 		<dependency>
@@ -155,6 +179,13 @@
 		 	<artifactId>dirigible-resources</artifactId>
 		 	<version>${dirigible.version}</version>
 		</dependency>
+		
+		<!-- External API modules -->
+		<dependency>
+		 	<groupId>org.eclipse.dirigible</groupId>
+		 	<artifactId>dirigible-ext</artifactId>
+		 	<version>7.0.0-SNAPSHOT</version>
+		</dependency>
 
 		<!-- External -->
 		<dependency>
@@ -169,7 +200,7 @@
 			<artifactId>jetty-servlets</artifactId>
 			<version>${jetty.version}</version>
 		</dependency>
-		
+	
 	</dependencies>
 
 	<properties>

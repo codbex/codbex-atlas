@@ -9,7 +9,7 @@
  * SPDX-FileCopyrightText: 2022 codbex or an codbex affiliate company and contributors
  * SPDX-License-Identifier: EPL-2.0
  */
-package com.codbex.platform.services.spring;
+package com.codbex.atlas.services.spring;
 
 import java.io.IOException;
 import java.util.ArrayList;
