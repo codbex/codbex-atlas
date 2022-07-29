@@ -138,23 +138,23 @@
 	<body>
 		<div class="container text-center">
 			<br><br><br><br><br>
-			<h1>Preparing your codbex environment... <span class="badge badge-secondary"><div class="busy-indicator">
+			<h1>Preparing Eclipse Dirigible Instance <span class="badge badge-secondary"><div class="busy-indicator">
 			<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></span></h1>
 
 			<table class="table table-striped">
-		    <thead>
-		        <tr>
-		            <td>Name</td>
-		            <td>Status</td>
-		        </tr>
-		    </thead>
-		    <tbody>
-		        <tr ng-repeat="job in jobs">
-				   <td>{{job.name}}</td>
-				   <td class="{{job.status}}">{{job.status}}</td>
-				</tr>
-		    </tbody>
-		</table>
+			    <thead>
+			        <tr>
+			            <th>Synchronizer</th>
+						<th>Status</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			        <tr ng-repeat="job in jobs">
+					   <td>{{job.name}}</td>
+					   <td class="{{job.status}}">{{job.status}}</td>
+					</tr>
+			    </tbody>
+			</table>
 
 		</div>
 	</body>
@@ -173,15 +173,15 @@
 		        	if (healthStatus.data.status === "Ready") {
 						window.location='home';
 					}
-					var jobs = [];
+					let jobs = [];
 					for (const [key, value] of Object.entries(healthStatus.data.jobs.statuses)) {
-						var job = new Object();
+						let job = new Object();
 						job.name = key;
 						job.status = value;
 						jobs.push(job);
 					}
 		        	$scope.jobs = jobs.sort((x, y) => x.name > y.name ? 1 : -1);
-        }), (function(e){
+		        }), (function(e){
 		            console.error("Error retreiving the health status", e);
 		        });
 

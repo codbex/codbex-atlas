@@ -56,24 +56,6 @@
 		<url-pattern>/public/v3/*</url-pattern>
 		<url-pattern>/public/v4/*</url-pattern>
 	</servlet-mapping>
-	
-	<servlet>
-        <servlet-name>ODataServlet</servlet-name>
-        <servlet-class>org.apache.cxf.jaxrs.servlet.CXFNonSpringJaxrsServlet</servlet-class>
-        <init-param>
-            <param-name>javax.ws.rs.Application</param-name>
-            <param-value>org.apache.olingo.odata2.core.rest.app.ODataApplication</param-value>
-        </init-param>
-        <init-param>
-            <param-name>org.apache.olingo.odata2.service.factory</param-name>
-            <param-value>org.eclipse.dirigible.engine.odata2.factory.DirigibleODataServiceFactory</param-value>
-        </init-param>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>ODataServlet</servlet-name>
-        <url-pattern>/odata/v2/*</url-pattern>
-    </servlet-mapping>
 
 	<filter>
 		<filter-name>QoSFilter</filter-name>
@@ -120,13 +102,6 @@
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 	
-	<!-- <resource-ref>
-		<res-ref-name>jdbc/DefaultDB</res-ref-name>
-		<res-type>javax.sql.DataSource</res-type>
-		<res-auth>Container</res-auth>
-		<res-sharing-scope>Shareable</res-sharing-scope>
-	</resource-ref> -->
-	
 	<login-config>
         <auth-method>FORM</auth-method>
         <form-login-config>
@@ -154,6 +129,9 @@
 			<web-resource-name>Landing Page</web-resource-name>
 			<url-pattern>/index.html</url-pattern>
 		</web-resource-collection>
+		<auth-constraint>
+			<role-name>Everyone</role-name>
+		</auth-constraint>
 	</security-constraint>
 	
 	<!-- Themes -->
@@ -172,11 +150,17 @@
 	        <web-resource-name>Engine Services</web-resource-name>
 	        <url-pattern>/services/v3/web/*</url-pattern>
 	        <url-pattern>/services/v3/js/*</url-pattern>
+	        <url-pattern>/services/v3/nashorn/*</url-pattern>
+	        <url-pattern>/services/v3/rhino/*</url-pattern>
+			<url-pattern>/services/v3/v8/*</url-pattern>
 			<url-pattern>/services/v3/graalvm/*</url-pattern>
 	        <url-pattern>/services/v3/wiki/*</url-pattern>
 	        <url-pattern>/services/v3/command/*</url-pattern>
 	        <url-pattern>/services/v4/web/*</url-pattern>
 	        <url-pattern>/services/v4/js/*</url-pattern>
+	        <url-pattern>/services/v4/nashorn/*</url-pattern>
+	        <url-pattern>/services/v4/rhino/*</url-pattern>
+			<url-pattern>/services/v4/v8/*</url-pattern>
 			<url-pattern>/services/v4/graalvm/*</url-pattern>
 	        <url-pattern>/services/v4/wiki/*</url-pattern>
 			<url-pattern>/services/v4/command/*</url-pattern>
@@ -192,11 +176,17 @@
 	        <web-resource-name>Public Engine Services</web-resource-name>
 	        <url-pattern>/public/v3/web/*</url-pattern>
 	        <url-pattern>/public/v3/js/*</url-pattern>
+	        <url-pattern>/public/v3/nashorn/*</url-pattern>
+	        <url-pattern>/public/v3/rhino/*</url-pattern>
+			<url-pattern>/public/v3/v8/*</url-pattern>
 			<url-pattern>/public/v3/graalvm/*</url-pattern>
 	        <url-pattern>/public/v3/wiki/*</url-pattern>
 	        <url-pattern>/public/v3/command/*</url-pattern>
 	        <url-pattern>/public/v4/web/*</url-pattern>
 	        <url-pattern>/public/v4/js/*</url-pattern>
+	        <url-pattern>/public/v4/nashorn/*</url-pattern>
+	        <url-pattern>/public/v4/rhino/*</url-pattern>
+			<url-pattern>/public/v4/v8/*</url-pattern>
 			<url-pattern>/public/v4/graalvm/*</url-pattern>
 	        <url-pattern>/public/v4/wiki/*</url-pattern>
 	        <url-pattern>/public/v4/command/*</url-pattern>
