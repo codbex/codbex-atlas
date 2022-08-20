@@ -37,6 +37,13 @@
 
 	<dependencies>
 
+		<!-- Atlas -->
+		<dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>codbex-atlas-modules-all</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
 		<!-- Platform -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -157,6 +164,12 @@
 		 	<groupId>org.eclipse.dirigible</groupId>
 		 	<artifactId>dirigible-ide</artifactId>
 		 	<version>${dirigible.version}</version>
+		 	<exclusions>
+				<exclusion>
+                    <groupId>org.eclipse.dirigible</groupId>
+                    <artifactId>dirigible-ide-ui-branding</artifactId>
+                </exclusion>
+			</exclusions>
 		</dependency>
 		
 		<!-- Templating Core -->
