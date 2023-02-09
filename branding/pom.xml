@@ -9,8 +9,8 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <name>codbex - atlas - ide - branding</name>
-    <artifactId>codbex-atlas-ide-branding</artifactId>
+    <name>codbex - atlas - branding</name>
+    <artifactId>codbex-atlas-branding</artifactId>
     <version>0.1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 

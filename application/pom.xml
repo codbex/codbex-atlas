@@ -10,8 +10,8 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-	<name>codbex - atlas - application - all</name>
-	<artifactId>codbex-atlas-application-all</artifactId>
+	<name>codbex - atlas - application</name>
+	<artifactId>codbex-atlas-application</artifactId>
 	<packaging>jar</packaging>
 
 
@@ -19,7 +19,7 @@
 
 		<dependency>
             <groupId>com.codbex.atlas</groupId>
-            <artifactId>codbex-atlas-ide-branding</artifactId>
+            <artifactId>codbex-atlas-branding</artifactId>
             <version>0.1.0-SNAPSHOT</version>
         </dependency>
 
