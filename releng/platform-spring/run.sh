@@ -1,1 +1,0 @@
-java -jar ./target/codbex-atlas-spring-0.1.0-SNAPSHOT.jar

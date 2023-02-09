@@ -1,0 +1,1 @@
+java -jar ./components/app-all/target/codbex-atlas-components-application-all-0.1.0-SNAPSHOT.jar
