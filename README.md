@@ -10,11 +10,11 @@ It is good for exploration about the different features and their applicability 
 	
 #### Run
 
-	java -jar components/app-all/target/codbex-atlas-components-application-all-0.1.0-SNAPSHOT.jar
+	java -jar app-all/target/codbex-atlas-application-all-0.1.0-SNAPSHOT.jar
 
 #### Debug
 
-	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000 -jar components/app-all/target/codbex-atlas-components-application-all-0.1.0-SNAPSHOT.jar
+	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000 -jar app-all/target/codbex-atlas-application-all-0.1.0-SNAPSHOT.jar
 	
 #### REST API
 

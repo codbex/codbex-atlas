@@ -5,13 +5,13 @@
 
     <parent>
         <groupId>com.codbex.atlas</groupId>
-        <artifactId>codbex-atlas-components</artifactId>
+        <artifactId>codbex-atlas-parent</artifactId>
         <version>0.1.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-	<name>codbex - atlas - components - application - all</name>
-	<artifactId>codbex-atlas-components-application-all</artifactId>
+	<name>codbex - atlas - application - all</name>
+	<artifactId>codbex-atlas-application-all</artifactId>
 	<packaging>jar</packaging>
 
 
@@ -19,7 +19,7 @@
 
 		<dependency>
             <groupId>com.codbex.atlas</groupId>
-            <artifactId>codbex-atlas-components-ide-branding</artifactId>
+            <artifactId>codbex-atlas-ide-branding</artifactId>
             <version>0.1.0-SNAPSHOT</version>
         </dependency>
 
@@ -806,7 +806,7 @@
 	</build>
 
     <properties>
-        <license.header.location>../../licensing-header.txt</license.header.location>
+        <license.header.location>../licensing-header.txt</license.header.location>
     </properties>
 
 </project>

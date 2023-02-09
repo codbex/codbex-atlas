@@ -4,18 +4,18 @@
 
     <parent>
         <groupId>com.codbex.atlas</groupId>
-        <artifactId>codbex-atlas-components</artifactId>
+        <artifactId>codbex-atlas-parent</artifactId>
         <version>0.1.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <name>codbex - atlas - components - ide - branding</name>
-    <artifactId>codbex-atlas-components-ide-branding</artifactId>
+    <name>codbex - atlas - ide - branding</name>
+    <artifactId>codbex-atlas-ide-branding</artifactId>
     <version>0.1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <properties>
-        <license.header.location>../../licensing-header.txt</license.header.location>
+        <license.header.location>../licensing-header.txt</license.header.location>
     </properties>
 
 </project>
