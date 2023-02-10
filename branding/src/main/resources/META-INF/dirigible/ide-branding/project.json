@@ -2,7 +2,7 @@
 	"guid": "ide-branding",
 	"repository": {
 		"type": "git",
-		"branch": "master",
+		"branch": "main",
 		"url": "https://github.com/codbex/codbex-atlas.git"
 	}
 }
