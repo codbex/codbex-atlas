@@ -1,6 +1,6 @@
 # codbex-atlas
 
-Atlas Platform contains all the available standard components.
+Atlas Edition contains all the available standard components.
 
 It is good for exploration about the different features and their applicability in particular scenarios.
 
