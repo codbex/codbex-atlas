@@ -506,6 +506,13 @@
 			<version>${dirigible.version}</version>
 		</dependency>
 		
+		<!-- BPM -->
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-bpm-flowable</artifactId>
+			<version>${dirigible.version}</version>
+		</dependency>
+		
 		<!-- CMS -->
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
