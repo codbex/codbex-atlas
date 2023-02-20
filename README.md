@@ -12,6 +12,8 @@ docker pull ghcr.io/codbex/codbex-atlas:latest
 docker run --name codbex-atlas --rm -p 8080:8080 ghcr.io/codbex/codbex-atlas:latest
 ```
 
+- For Apple's M1: provide `--platform=linux/arm64` for better performance		
+
 #### Build
 
 ```
