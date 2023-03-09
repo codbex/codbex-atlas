@@ -317,11 +317,7 @@
         <java.version>11</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-<<<<<<< HEAD
         <dirigible.version>7.2.0</dirigible.version>
-=======
-        <dirigible.version>7.1.5</dirigible.version>
->>>>>>> 3d0e15b43009b63a9b9a151de2988e999a900317
 
         <java.version>11</java.version>
         <maven.resource.plugin.version>3.3.0</maven.resource.plugin.version>
