@@ -29,6 +29,12 @@
 			<artifactId>dirigible-components-group-core</artifactId>
 			<version>${dirigible.version}</version>
 			<type>pom</type>
+			<exclusions>
+				<exclusion>
+					<groupId>com.zaxxer</groupId>
+					<artifactId>HikariCP-java7</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		
 		<!-- Security -->
