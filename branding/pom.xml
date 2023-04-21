@@ -5,13 +5,13 @@
     <parent>
         <groupId>com.codbex.atlas</groupId>
         <artifactId>codbex-atlas-parent</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>0.4.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
     <name>codbex - atlas - branding</name>
     <artifactId>codbex-atlas-branding</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>0.4.0</version>
     <packaging>jar</packaging>
 
     <properties>
