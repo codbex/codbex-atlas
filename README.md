@@ -9,7 +9,7 @@ It is good for exploration about the different features and their applicability 
 
 ```
 docker pull ghcr.io/codbex/codbex-atlas:latest
-docker run --name codbex-atlas --rm -p 8080:8080 ghcr.io/codbex/codbex-atlas:latest
+docker run --name codbex-atlas --rm -p 80:80 ghcr.io/codbex/codbex-atlas:latest
 ```
 
 - For Apple's M1: provide `--platform=linux/arm64` for better performance		
@@ -35,11 +35,11 @@ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000 -jar app
 #### Web
 
 ```
-http://localhost:8080
+http://localhost
 ```
 
 #### REST API
 
 ```
-http://localhost:8080/swagger-ui/index.html
+http://localhost/swagger-ui/index.html
 ```
