@@ -23,13 +23,13 @@ mvn clean install
 #### Run
 
 ```
-java -jar application/target/codbex-atlas-application-*.jar
+java --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED -jar application/target/codbex-atlas-application-*.jar
 ```
 
 #### Debug
 
 ```
-java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000 -jar application/target/codbex-atlas-application-*.jar
+java --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000 -jar application/target/codbex-atlas-application-*.jar
 ```
 	
 #### Web
