@@ -99,6 +99,12 @@
 			<artifactId>dirigible-components-group-resources</artifactId>
 			<type>pom</type>
 		</dependency>
+
+		<!--Security-->
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-security-oauth2</artifactId>
+		</dependency>
 		
 		<!-- Templates -->
 		<dependency>
@@ -130,6 +136,13 @@
 		    <groupId>net.snowflake</groupId>
 		    <artifactId>snowflake-jdbc</artifactId>
 		    <version>${snowflake.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.codeborne</groupId>
+			<artifactId>selenide</artifactId>
+			<version>${selenide.version}</version>
+			<scope>test</scope>
 		</dependency>
 
 	</dependencies>
@@ -177,6 +190,9 @@
 
     <properties>
         <license.header.location>../licensing-header.txt</license.header.location>
+		<parent.pom.folder>../</parent.pom.folder>
+		<skipITs>true</skipITs>
+		<selenide.version>7.0.4</selenide.version>
     </properties>
 
 </project>
