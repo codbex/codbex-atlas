@@ -99,6 +99,11 @@
 			<artifactId>dirigible-components-group-resources</artifactId>
 			<type>pom</type>
 		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-security-oauth2</artifactId>
+		</dependency>
 		
 		<!-- Templates -->
 		<dependency>
@@ -110,6 +115,13 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.codeborne</groupId>
+			<artifactId>selenide</artifactId>
+			<version>7.0.6</version>
+			<scope>test</scope>
 		</dependency>
 
 		<!-- Drivers -->
