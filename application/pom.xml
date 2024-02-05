@@ -66,6 +66,16 @@
 					<groupId>javax.servlet</groupId>
 					<artifactId>javax.servlet-api</artifactId>
 				</exclusion>
+				<exclusion>
+					<groupId>org.apache.cxf</groupId>
+					<artifactId>cxf-rt-frontend-jaxrs</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.cxf</groupId>
+					<artifactId>
+						cxf-spring-boot-starter-jaxrs
+					</artifactId>
+				</exclusion>
 			</exclusions>
 		</dependency>
 		<dependency>
