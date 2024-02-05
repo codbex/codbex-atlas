@@ -308,7 +308,7 @@
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <dirigible.version>9.1.0</dirigible.version>
+        <dirigible.version>9.2.2</dirigible.version>
 
         <java.version>17</java.version>
         <maven.compiler.source>17</maven.compiler.source>
@@ -338,7 +338,7 @@
 
         <postgresql.version>42.7.0</postgresql.version>
         <ngdbc.version>2.19.16</ngdbc.version>
-		<snowflake.version>3.14.3</snowflake.version>
+        <snowflake.version>3.14.3</snowflake.version>
         
         <activemq.version>5.17.3</activemq.version>
         <jsr250-api.version>1.0</jsr250-api.version>
