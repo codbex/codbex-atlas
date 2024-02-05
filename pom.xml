@@ -317,7 +317,7 @@
         <maven.resource.plugin.version>3.3.0</maven.resource.plugin.version>
         <maven.clean.plugin.version>3.2.0</maven.clean.plugin.version>
         <maven.clean.plugin.directory>src/main/resources/META-INF/dirigible</maven.clean.plugin.directory>
-        <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
+        <maven.compiler.plugin.version>3.12.1</maven.compiler.plugin.version>
         <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
         <maven.scm.plugin.version>1.13.0</maven.scm.plugin.version>
         <scmVersionType>branch</scmVersionType>
@@ -337,8 +337,8 @@
         <commons-dbcp2.version>2.9.0</commons-dbcp2.version>
 
         <postgresql.version>42.7.0</postgresql.version>
-        <ngdbc.version>2.18.16</ngdbc.version>
-		<snowflake.version>3.14.3</snowflake.version>
+        <ngdbc.version>2.19.16</ngdbc.version>
+        <snowflake.version>3.14.3</snowflake.version>
         
         <activemq.version>5.17.3</activemq.version>
         <jsr250-api.version>1.0</jsr250-api.version>
