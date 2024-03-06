@@ -12,24 +12,21 @@
 package com.codbex.atlas.ui.tests;
 
 import com.codbex.atlas.ui.Atlas;
-import com.codbex.atlas.ui.framework.HtmlElementType;
-import org.junit.jupiter.api.BeforeEach;
+import org.eclipse.dirigible.tests.framework.HtmlElementType;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 class HomePageIT extends UserInterfaceIntegrationTest {
 
     private static final String CODBEX_HEADER = "codbex";
 
+    @Autowired
     private Atlas atlas;
-
-    @BeforeEach
-    void setUp() {
-        this.atlas = new Atlas(browser);
-    }
 
     @Test
     void testOpenHomepage() {
         atlas.openHomePage();
 
         browser.assertElementExistsByTypeAndText(HtmlElementType.HEADER5, CODBEX_HEADER);
-    }}
+    }
+}

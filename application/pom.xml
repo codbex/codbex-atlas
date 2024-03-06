@@ -153,6 +153,10 @@
 		    <artifactId>snowflake-jdbc</artifactId>
 		    <version>${snowflake.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-tests-framework</artifactId>
+		</dependency>
 
 	</dependencies>
 

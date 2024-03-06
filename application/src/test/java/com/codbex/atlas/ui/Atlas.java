@@ -11,13 +11,18 @@
  */
 package com.codbex.atlas.ui;
 
-import com.codbex.atlas.ui.framework.Browser;
-import com.codbex.atlas.ui.framework.HtmlAttribute;
-import com.codbex.atlas.ui.framework.HtmlElementType;
-import com.codeborne.selenide.SelenideElement;
+import org.eclipse.dirigible.tests.framework.Browser;
+import org.eclipse.dirigible.tests.framework.HtmlAttribute;
+import org.eclipse.dirigible.tests.framework.HtmlElementType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.stereotype.Component;
 
+@Component
+@Lazy
+@ComponentScan("org.eclipse.dirigible.tests.framework")
 public class Atlas {
     private static final Logger LOGGER = LoggerFactory.getLogger(Atlas.class);
 
@@ -33,7 +38,6 @@ public class Atlas {
     private static final String SUBMIT_TYPE = "submit";
 
     private static final String SIGN_IN_BUTTON_TEXT = "Sign in";
-
     private final Browser browser;
 
     public Atlas(Browser browser) {
@@ -46,8 +50,7 @@ public class Atlas {
     }
 
     public void login() {
-        SelenideElement title = browser.waitUntilExist(HtmlElementType.TITLE);
-        String pageTitle = title.getOwnText();
+        String pageTitle = browser.getPageTitle();
         if (!LOGIN_PAGE_TITLE.equals(pageTitle)) {
             LOGGER.info("Skipping login");
             return;
