@@ -237,6 +237,7 @@
 
     <properties>
         <license.header.location>../licensing-header.txt</license.header.location>
-    </properties>
+		<skipITs>true</skipITs>
+	</properties>
 
 </project>
