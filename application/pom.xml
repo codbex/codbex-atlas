@@ -21,6 +21,11 @@
             <artifactId>codbex-atlas-branding</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.codbex.atlas</groupId>
+            <artifactId>codbex-atlas-welcome</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
 
 		<!-- Core -->
 		<dependency>
@@ -92,6 +97,10 @@
 				<exclusion>
 					<groupId>org.eclipse.dirigible</groupId>
 					<artifactId>dirigible-components-ide-ui-branding</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.eclipse.dirigible</groupId>
+					<artifactId>dirigible-components-ide-ui-welcome</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>

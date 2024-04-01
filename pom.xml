@@ -29,6 +29,7 @@
     <modules>
         <module>application</module>
         <module>branding</module>
+        <module>welcome</module>
     </modules>
 
     <dependencies>
@@ -308,7 +309,7 @@
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <dirigible.version>10.2.2</dirigible.version>
+        <dirigible.version>10.2.4</dirigible.version>
 
         <java.version>17</java.version>
         <maven.compiler.source>17</maven.compiler.source>
