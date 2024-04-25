@@ -320,7 +320,8 @@
         <maven.clean.plugin.directory>src/main/resources/META-INF/dirigible</maven.clean.plugin.directory>
         <maven.compiler.plugin.version>3.13.0</maven.compiler.plugin.version>
         <maven-surefire-plugin.version>3.2.5</maven-surefire-plugin.version>
-        <maven-failsafe-plugin.version>3.2.5</maven-failsafe-plugin.version>        <maven.scm.plugin.version>1.13.0</maven.scm.plugin.version>
+        <maven-failsafe-plugin.version>3.2.5</maven-failsafe-plugin.version>
+        <maven.scm.plugin.version>1.13.0</maven.scm.plugin.version>
         <scmVersionType>branch</scmVersionType>
         <commons.io>2.11.0</commons.io>
         <commons.codec>1.15</commons.codec>
