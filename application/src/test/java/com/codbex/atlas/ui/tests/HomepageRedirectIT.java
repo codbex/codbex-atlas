@@ -16,9 +16,7 @@ import org.eclipse.dirigible.tests.framework.HtmlElementType;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-class HomePageIT extends UserInterfaceIntegrationTest {
-
-    private static final String ATLAS_HEADER = "Welcome to Atlas";
+class HomepageRedirectIT extends UserInterfaceIntegrationTest {
 
     @Autowired
     private Atlas atlas;
@@ -26,7 +24,14 @@ class HomePageIT extends UserInterfaceIntegrationTest {
     @Test
     void testOpenHomepage() {
         atlas.openHomePage();
+        assertHomeRedirect("/");
+        assertHomeRedirect("");
+        assertHomeRedirect("/home");
+    }
 
-        browser.assertElementExistsByTypeAndText(HtmlElementType.HEADER3, ATLAS_HEADER);
+    private void assertHomeRedirect(String path) {
+        browser.openPath(path);
+        browser.assertElementExistsByTypeAndText(HtmlElementType.ANCHOR, "Welcome");
+
     }
 }
