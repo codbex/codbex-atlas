@@ -26,6 +26,31 @@
         <url>https://github.com/codbex/codbex-atlas</url>
     </scm>
 
+    <properties>
+        <project.title>codbex atlas</project.title>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <dirigible.version>11.0.0-SNAPSHOT</dirigible.version>
+
+        <java.version>17</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+
+        <!-- Maven -->
+        <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
+        <maven-surefire-plugin.version>3.2.5</maven-surefire-plugin.version>
+        <maven-failsafe-plugin.version>3.2.5</maven-failsafe-plugin.version>
+        <maven-jacoco-plugin.version>0.8.12</maven-jacoco-plugin.version>
+        <maven-git-commit-id-plugin.version>4.9.10</maven-git-commit-id-plugin.version>
+        <maven-license-plugin.version>4.4</maven-license-plugin.version>
+
+        <profile.content.phase>none</profile.content.phase>
+
+        <license.header.location>licensing-header.txt</license.header.location>
+
+    </properties>
+
     <modules>
         <module>application</module>
         <module>branding</module>
@@ -131,7 +156,6 @@
 		<dependency>
 			<groupId>com.codbex.olingo</groupId>
 			<artifactId>olingo-odata2-lib</artifactId>
-			<version>${olingo.version}</version>
 			<type>pom</type>
 		</dependency>
 
@@ -145,6 +169,16 @@
                 <version>${dirigible.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.codbex.atlas</groupId>
+                <artifactId>codbex-atlas-branding</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.codbex.atlas</groupId>
+                <artifactId>codbex-atlas-welcome</artifactId>
+                <version>${project.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -284,35 +318,5 @@
 
     </profiles>
 
-    <properties>
-        <project.title>codbex atlas</project.title>
 
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-        <dirigible.version>10.4.1</dirigible.version>
-
-        <java.version>17</java.version>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-
-        <!-- Maven -->
-        <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
-        <maven-surefire-plugin.version>3.2.5</maven-surefire-plugin.version>
-		<maven-failsafe-plugin.version>3.2.5</maven-failsafe-plugin.version>
-        <maven-jacoco-plugin.version>0.8.12</maven-jacoco-plugin.version>
-        <maven-git-commit-id-plugin.version>4.9.10</maven-git-commit-id-plugin.version>
-        <maven-license-plugin.version>4.5</maven-license-plugin.version>
-
-        <!-- JDBC -->
-		<ngdbc.version>2.20.17</ngdbc.version>
-		<snowflake.version>3.16.0</snowflake.version>
-
-        <!-- Olingo -->
-		<olingo.version>3.1.4</olingo.version>
-
-        <profile.content.phase>none</profile.content.phase>
-
-        <license.header.location>licensing-header.txt</license.header.location>
-
-    </properties>
 </project>
