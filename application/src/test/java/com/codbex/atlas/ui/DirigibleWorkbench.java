@@ -35,7 +35,7 @@ public class DirigibleWorkbench {
     }
 
     public void publishAll() {
-        browser.clickElementByAttributePattern(HtmlElementType.BUTTON, HtmlAttribute.TITLE, "Publish all");
+        browser.clickOnElementByAttributePattern(HtmlElementType.BUTTON, HtmlAttribute.TITLE, "Publish all");
         browser.assertElementExistsByTypeAndTextPattern(HtmlElementType.SPAN, "Published all projects in");
     }
 }
