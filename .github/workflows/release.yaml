@@ -19,6 +19,7 @@ jobs:
     uses: codbex/codbex-infra/.github/workflows/platform-release.yaml@main
     with:
       platform-name: codbex-atlas
+      maven-release: true
       release-version: ${{ inputs.release-version }}
       snapshot-version: ${{ inputs.snapshot-version }}
       docker-release: true
