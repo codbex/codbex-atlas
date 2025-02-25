@@ -79,5 +79,4 @@ public class Atlas {
         return LOGIN_PAGE_TITLE.equals(pageTitle);
     }
 
-
 }
