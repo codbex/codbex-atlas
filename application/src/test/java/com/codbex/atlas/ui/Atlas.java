@@ -79,12 +79,4 @@ public class Atlas {
         return LOGIN_PAGE_TITLE.equals(pageTitle);
     }
 
-    public void login() {
-        login(true);
-    }
-
-    public DirigibleWorkbench openWorkbench() {
-        browser.clickOnElementByAttributeValue(HtmlElementType.ANCHOR, HtmlAttribute.TITLE, "Workbench");
-        return new DirigibleWorkbench(browser);
-    }
 }
