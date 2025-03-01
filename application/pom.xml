@@ -84,20 +84,46 @@
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-engine-command</artifactId>
 		</dependency>
-		
-		<!-- IDE -->
+
+		<!-- IDE Backend -->
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-group-ide</artifactId>
+			<artifactId>dirigible-components-ide-console</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-ide-git</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-ide-logs</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-ide-problems</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-ide-template</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-ide-terminal</artifactId>
+		</dependency>
+
+		<!-- UI Frontend -->
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-group-ui</artifactId>
 			<type>pom</type>
 			<exclusions>
 				<exclusion>
 					<groupId>org.eclipse.dirigible</groupId>
-					<artifactId>dirigible-components-ide-ui-branding</artifactId>
+					<artifactId>dirigible-components-ui-platform-branding</artifactId>
 				</exclusion>
 				<exclusion>
 					<groupId>org.eclipse.dirigible</groupId>
-					<artifactId>dirigible-components-ide-ui-welcome</artifactId>
+					<artifactId>dirigible-components-ui-view-welcome</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>

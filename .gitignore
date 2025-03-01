@@ -1,6 +1,7 @@
 target/
 bin/
 log/
+application/build/
 .idea
 .history
 .vscode

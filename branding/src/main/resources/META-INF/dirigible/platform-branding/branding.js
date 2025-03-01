@@ -14,9 +14,9 @@ const brandingInfo = {
     brand: 'codbex',
     brandUrl: 'https://www.codbex.com/',
     icons: {
-        faviconIco: '/services/web/ide-branding/images/favicon.ico',
-        favicon32: '/services/web/ide-branding/images/favicon-32x32.png',
-        favicon16: '/services/web/ide-branding/images/favicon-16x16.png',
+        faviconIco: '/services/web/platform-branding/images/favicon.ico',
+        favicon32: '/services/web/platform-branding/images/favicon-32x32.png',
+        favicon16: '/services/web/platform-branding/images/favicon-16x16.png',
     },
-    logo: '/services/web/ide-branding/images/logo.svg',
+    logo: '/services/web/platform-branding/images/logo.svg',
 };

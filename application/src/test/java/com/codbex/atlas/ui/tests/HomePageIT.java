@@ -17,8 +17,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 class HomePageIT extends UserInterfaceIntegrationTest {
 
-    private static final String ATLAS_HEADER = "Welcome to Atlas";
-
     @Autowired
     private Atlas atlas;
 
@@ -26,6 +24,7 @@ class HomePageIT extends UserInterfaceIntegrationTest {
     void testOpenHomepage() {
         atlas.openHomePage();
 
-        browser.assertElementExistsByTypeAndText(HtmlElementType.HEADER3, ATLAS_HEADER);
+        browser.assertElementExistsByTypeAndText(HtmlElementType.SPAN, "codbex");
+        browser.assertElementExistsByTypeAndText(HtmlElementType.HEADER3, "Welcome to Atlas");
     }
 }
