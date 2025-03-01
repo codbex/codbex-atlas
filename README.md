@@ -1,7 +1,7 @@
 # Atlas by codbex
 
 [![Build Status](https://github.com/codbex/codbex-atlas/actions/workflows/build.yaml/badge.svg)](https://github.com/codbex/codbex-atlas/actions/workflows/build.yaml)
-[![Eclipse License](https://img.shields.io/badge/License-EPL%202.0-brightgreen.svg)](https://github.com/codbex/codbex-helios/blob/main/LICENSE)
+[![Eclipse License](https://img.shields.io/badge/License-EPL%202.0-brightgreen.svg)](https://github.com/codbex/codbex-atlas/blob/main/LICENSE)
 [![Maven Central](https://img.shields.io/maven-central/v/com.codbex.atlas/codbex-atlas-application.svg)](https://central.sonatype.com/namespace/com.codbex.atlas)
 
 Atlas Edition contains all the available standard components.
