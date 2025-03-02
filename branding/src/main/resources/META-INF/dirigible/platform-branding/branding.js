@@ -9,14 +9,30 @@
  * SPDX-FileCopyrightText: 2022 codbex or an codbex affiliate company and contributors
  * SPDX-License-Identifier: EPL-2.0
  */
-const brandingInfo = {
+
+if (!top.hasOwnProperty('PlatformBranding')) top.PlatformBranding = {
     name: 'codbex',
     brand: 'codbex',
     brandUrl: 'https://www.codbex.com/',
     icons: {
         faviconIco: '/services/web/platform-branding/images/favicon.ico',
-        favicon32: '/services/web/platform-branding/images/favicon-32x32.png',
-        favicon16: '/services/web/platform-branding/images/favicon-16x16.png',
     },
     logo: '/services/web/platform-branding/images/logo.svg',
+    keyPrefix: 'codbex'
 };
+
+function getBrandingInfo() {
+    if (top.hasOwnProperty('PlatformBranding')) return top.PlatformBranding;
+    throw Error("PlatformBranding is not set!");
+}
+
+function setBrandingInfo({ name, brand, brandUrl, icons, logo, keyPrefix } = {}) {
+    if (name) top.PlatformBranding.name = name;
+    if (brand) top.PlatformBranding.brand = brand;
+    if (brandUrl) top.PlatformBranding.brandUrl = brandUrl;
+    if (icons) {
+        if (icons['faviconIco']) top.PlatformBranding.icons.faviconIco = icons['faviconIco'];
+    }
+    if (logo) top.PlatformBranding.logo = logo;
+    if (keyPrefix) top.PlatformBranding.keyPrefix = keyPrefix;
+}
