@@ -10,19 +10,14 @@
  */
 package com.codbex.atlas.ui.tests;
 
-import com.codbex.atlas.ui.Atlas;
 import org.eclipse.dirigible.tests.framework.HtmlElementType;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 
-class HomePageIT extends UserInterfaceIntegrationTest {
-
-    @Autowired
-    private Atlas atlas;
+class HomePageIT extends AtlasIntegrationTest {
 
     @Test
     void testOpenHomepage() {
-        atlas.openHomePage();
+        ide.openHomePage();
 
         browser.assertElementExistsByTypeAndText(HtmlElementType.SPAN, "codbex");
         browser.assertElementExistsByTypeAndText(HtmlElementType.HEADER3, "Welcome to Atlas");

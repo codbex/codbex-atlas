@@ -10,19 +10,15 @@
  */
 package com.codbex.atlas.ui.tests;
 
-import com.codbex.atlas.ui.Atlas;
 import org.eclipse.dirigible.tests.framework.HtmlElementType;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 
-class HomepageRedirectIT extends UserInterfaceIntegrationTest {
-
-    @Autowired
-    private Atlas atlas;
+class HomepageRedirectIT extends AtlasIntegrationTest {
 
     @Test
     void testOpenHomepage() {
-        atlas.openHomePage();
+        ide.openHomePage();
+
         assertHomeRedirect("/");
         assertHomeRedirect("");
         assertHomeRedirect("/home");
