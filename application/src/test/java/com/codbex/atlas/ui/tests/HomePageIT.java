@@ -19,7 +19,7 @@ class HomePageIT extends AtlasIntegrationTest {
     void testOpenHomepage() {
         ide.openHomePage();
 
-        browser.assertElementExistsByTypeAndText(HtmlElementType.SPAN, "codbex");
+        browser.assertElementExistsByTypeAndText(HtmlElementType.SPAN, "Atlas");
         browser.assertElementExistsByTypeAndText(HtmlElementType.HEADER3, "Welcome to Atlas");
     }
 }
