@@ -27,9 +27,15 @@ import org.springframework.scheduling.annotation.EnableScheduling;
                 HibernateJpaAutoConfiguration.class, JdbcTemplateAutoConfiguration.class})
 @EnableScheduling
 public class AtlasApplication {
+    private static long startedAt;
 
-    public static void main(String[] args) {
-        SpringApplication.run(AtlasApplication.class, args);
+    public static long getStartedAt() {
+        return startedAt;
     }
 
+    public static void main(String[] args) {
+        startedAt = System.currentTimeMillis();
+        System.out.println("------- Application is starting -------");
+        SpringApplication.run(AtlasApplication.class, args);
+    }
 }
