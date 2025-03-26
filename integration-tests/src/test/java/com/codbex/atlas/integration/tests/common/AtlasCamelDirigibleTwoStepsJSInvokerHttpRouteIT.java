@@ -8,9 +8,9 @@
  * SPDX-FileCopyrightText: 2022 codbex or an codbex affiliate company and contributors
  * SPDX-License-Identifier: EPL-2.0
  */
-package com.codbex.kronos.integration.tests.common;
+package com.codbex.atlas.integration.tests.common;
 
 import org.eclipse.dirigible.integration.tests.ui.tests.camel.CamelDirigibleTwoStepsJSInvokerHttpRouteIT;
 
-class KronosCamelDirigibleTwoStepsJSInvokerHttpRouteIT extends CamelDirigibleTwoStepsJSInvokerHttpRouteIT {
+class AtlasCamelDirigibleTwoStepsJSInvokerHttpRouteIT extends CamelDirigibleTwoStepsJSInvokerHttpRouteIT {
 }

@@ -1,6 +1,6 @@
-package com.codbex.kronos.integration.tests.common;
+package com.codbex.atlas.integration.tests.common;
 
 import org.eclipse.dirigible.integration.tests.ui.tests.HomepageRedirectIT;
 
-class KronosHomepageRedirectIT extends HomepageRedirectIT {
+class AtlasHomepageRedirectIT extends HomepageRedirectIT {
 }

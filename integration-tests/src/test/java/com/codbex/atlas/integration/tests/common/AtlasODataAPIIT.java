@@ -1,6 +1,6 @@
-package com.codbex.kronos.integration.tests.common;
+package com.codbex.atlas.integration.tests.common;
 
 import org.eclipse.dirigible.integration.tests.api.rest.ODataAPIIT;
 
-class KronosODataAPIIT extends ODataAPIIT {
+class AtlasODataAPIIT extends ODataAPIIT {
 }
