@@ -1,6 +1,6 @@
-package com.codbex.atlas.integration.tests.common;
+package com.codbex.kronos.integration.tests.common;
 
 import org.eclipse.dirigible.integration.tests.api.SecurityIT;
 
-class AtlasSecurityIT extends SecurityIT {
+class KronosSecurityIT extends SecurityIT {
 }

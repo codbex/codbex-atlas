@@ -1,6 +1,6 @@
-package com.codbex.atlas.integration.tests.common;
+package com.codbex.kronos.integration.tests.common;
 
 import org.eclipse.dirigible.integration.tests.ui.tests.MailIT;
 
-class AtlasMailIT extends MailIT {
+class KronosMailIT extends MailIT {
 }
