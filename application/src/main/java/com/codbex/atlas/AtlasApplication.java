@@ -23,7 +23,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableScheduling
 @CamelOpenTelemetry
 @EnableTransactionManagement
-@SpringBootApplication(scanBasePackages = {"org.eclipse.dirigible"},//
+@SpringBootApplication(scanBasePackages = {"org.eclipse.dirigible"}, //
         exclude = {DataSourceAutoConfiguration.class, DataSourceTransactionManagerAutoConfiguration.class,
                 HibernateJpaAutoConfiguration.class, JdbcTemplateAutoConfiguration.class})
 public class AtlasApplication {
