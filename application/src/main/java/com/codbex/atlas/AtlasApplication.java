@@ -23,8 +23,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableScheduling
 @CamelOpenTelemetry
 @EnableTransactionManagement
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, DataSourceTransactionManagerAutoConfiguration.class,
-        HibernateJpaAutoConfiguration.class, JdbcTemplateAutoConfiguration.class})
+@SpringBootApplication(scanBasePackages = {"org.eclipse.dirigible"},//
+        exclude = {DataSourceAutoConfiguration.class, DataSourceTransactionManagerAutoConfiguration.class,
+                HibernateJpaAutoConfiguration.class, JdbcTemplateAutoConfiguration.class})
 public class AtlasApplication {
     private static long startedAt;
 
