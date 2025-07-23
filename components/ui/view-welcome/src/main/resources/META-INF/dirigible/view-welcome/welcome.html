@@ -12,10 +12,9 @@
     <link type="text/css" rel="stylesheet" href="/services/js/platform-core/services/loader.js?id=view-css" />
     <script src="js/welcome.js" type="text/javascript"></script>
     <style>
-      .imgColor {
-        background-color: var(--sapBrandColor);
-        color: var(--sapTextColor);
-        fill: var(--sapTextColor);
+      .imgColor path {
+        background-color: var(--fdAvatarBackgroundColor);
+        fill: var(--fdAvatarColor);
       }
 
     </style>
@@ -46,7 +45,9 @@
                 <bk-card-header title="{{::template.name}}" subtitle="{{::template.description}}" interactive="true" description="Create project from template {{::template.name}}">
                   <bk-avatar ng-if="!template.glyph && !template.image" glyph="sap-icon--example" style="font-size:2rem" size="s" aria-label="project template icon"></bk-avatar>
                   <bk-avatar ng-if="template.glyph && !template.image" glyph="{{::template.glyph}}" style="font-size:2rem" size="s" aria-label="project template icon"></bk-avatar>
-                  <bk-avatar ng-if="!template.glyph && template.image" class="imgColor" image="{{::template.image}}" style="font-size:1.5rem" size="s" aria-label="project template icon"></bk-avatar>
+                  <bk-avatar ng-if="!template.glyph && template.image" size="s" aria-label="project template icon">
+                    <span class="imgColor bk-fill-parent bk-center bk-icon--svg bk-icon--scale sap-icon" role="presentation" ng-include="::template.image"></span>
+                  </bk-avatar>
                 </bk-card-header>
               </bk-card>
             </div>

@@ -19,10 +19,6 @@
             <groupId>com.codbex.atlas</groupId>
             <artifactId>codbex-atlas-branding</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.codbex.atlas</groupId>
-            <artifactId>codbex-atlas-welcome</artifactId>
-        </dependency>
 
         <!-- Core -->
         <dependency>
@@ -127,9 +123,19 @@
             <exclusions>
                 <exclusion>
                     <groupId>org.eclipse.dirigible</groupId>
-                    <artifactId>dirigible-components-ui-view-welcome</artifactId>
+                    <artifactId>dirigible-components-ui-menu-help</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+
+        <!-- IDE UI -->
+        <dependency>
+            <groupId>com.codbex.atlas</groupId>
+            <artifactId>codbex-atlas-components-ui-menu-help</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.codbex.atlas</groupId>
+            <artifactId>codbex-atlas-components-ui-welcome</artifactId>
         </dependency>
 
         <!-- API -->
@@ -142,8 +148,19 @@
         <!-- Resources -->
         <dependency>
             <groupId>org.eclipse.dirigible</groupId>
-            <artifactId>dirigible-components-group-resources</artifactId>
+            <artifactId>dirigible-components-group-resources-ui</artifactId>
             <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-group-ide</artifactId>
+            <type>pom</type>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.eclipse.dirigible</groupId>
+                    <artifactId>dirigible-components-ui-view-welcome</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
