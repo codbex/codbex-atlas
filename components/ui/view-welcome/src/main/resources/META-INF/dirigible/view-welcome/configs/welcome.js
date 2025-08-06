@@ -10,12 +10,12 @@
  * SPDX-License-Identifier: EPL-2.0
  */
 const viewData = {
-	id: "welcome",
-	label: "Welcome",
-	factory: "frame",
+	id: 'welcome',
+	label: 'Welcome',
+	factory: 'frame',
 	lazyLoad: true,
-	region: "center",
-	path: "/services/web/view-welcome/welcome.html"
+	region: 'center',
+	path: '/services/web/view-welcome/welcome.html'
 }
 if (typeof exports !== 'undefined') {
 	exports.getView = () => viewData;
