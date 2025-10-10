@@ -3,7 +3,7 @@ name: codbex-atlas
 image:
   registry: ghcr.io
   repository: codbex/codbex-atlas
-  tag: 2.78.0
+  tag: 2.79.0
   pullPolicy: Always # Always or IfNotPresent
   pullSecrets: "" # Optional, set to a secret name if needed
 
