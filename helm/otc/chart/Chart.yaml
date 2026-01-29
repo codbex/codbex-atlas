@@ -2,8 +2,8 @@ annotations:
   category: Web IDE
 apiVersion: v2
 name: codbex-atlas
-version: 2.92.0
-appVersion: 2.92.0
+version: 3.0.0-SNAPSHOT
+appVersion: 3.0.0-SNAPSHOT
 description: https://codbex.com/products/atlas
 home: https://github.com/codbex/codbex-atlas
 keywords:
