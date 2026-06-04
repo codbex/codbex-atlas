@@ -6,6 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Atlas is a **packaging/distribution project**, not a standalone codebase. It assembles the "Atlas Edition" — a Spring Boot application that bundles all standard [Eclipse Dirigible](https://www.eclipse.dev/dirigible/) components (the low-code/in-app development platform) plus codbex branding and a couple of custom UI components. Almost all behavior lives in the `org.eclipse.dirigible` dependencies pulled in via the `com.codbex.platform:codbex-platform-parent` parent POM; this repo mostly selects which Dirigible component groups to include and configures/brands them.
 
+Atlas is one of the [codbex product family](https://www.codbex.com/products/). It is the **all-in-one edition containing every standard component** (JavaScript development, UIs, debugging, Git, databases, jobs, messaging, security, BPM, CMS), intended for exploring the full feature set. The sibling products are specialized, narrower subsets of the same platform — e.g. Helios (API development), Hades (database management), Oceanus (CMIS document management), Hyperion (BPM, Flowable), Iapetus (ETL/integration, Apache Camel), Rhea (model-driven entities/forms/reports), Kronos (XS/ABAP compatibility), Phoebe (data workflows, Apache Airflow). They are all built the same way (this same packaging pattern over Dirigible components); Atlas simply enables all of them.
+
 Implication: when investigating runtime behavior or APIs, the answer is usually in the Dirigible dependencies (the `dirigible-components-*` artifacts), not in this repo's source. This repo has only a handful of Java files.
 
 ## Build & run
