@@ -156,13 +156,6 @@
             <artifactId>h2</artifactId>
         </dependency>
 
-        <!-- Olingo -->
-        <dependency>
-            <groupId>com.codbex.olingo</groupId>
-            <artifactId>olingo-odata2-lib</artifactId>
-            <type>pom</type>
-        </dependency>
-
     </dependencies>
 
     <dependencyManagement>

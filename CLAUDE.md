@@ -52,8 +52,20 @@ Maven reactor modules (see root `pom.xml`):
 
 - **application** — the Spring Boot app. `AtlasApplication` is a `@SpringBootApplication` that scans `org.eclipse.dirigible` and excludes Spring's datasource/JPA auto-config (Dirigible manages its own datasources). Its `pom.xml` is the real definition of the edition: it lists every Dirigible component group included (core, security, database, engines, IDE backend/UI, APIs, templates) and the bundled JDBC drivers (Postgres, MongoDB, SAP HANA `ngdbc`, Snowflake, H2). The Spring Boot repackage produces the runnable jar. Also contains the `Dockerfile`.
 - **branding** — codbex/Atlas logo, favicon, and `project.json` packaged as Dirigible resources under `META-INF/dirigible/atlas-branding/`.
-- **components/ui/menu-help** and **components/ui/view-welcome** — custom Dirigible UI components that *override* the stock Dirigible ones (the stock `dirigible-components-ui-menu-help` and `dirigible-components-ui-view-welcome` are explicitly excluded in `application/pom.xml`). These are resource-only modules (HTML/JS + `.extension`/`config` files under `META-INF/dirigible/`), no Java.
+- **components/ui/menu-help** and **components/ui/view-welcome** — custom Dirigible UI components that *override* the stock Dirigible ones (the stock `dirigible-components-ui-menu-help` and `dirigible-components-ui-view-welcome` are explicitly excluded in `application/pom.xml`). These are resource-only modules (HTML/JS + `.extension`/`config` files under `META-INF/dirigible/`), no Java. They are **forks of upstream files**, so diff them against the matching Dirigible module on every version bump — they drift silently (translations must live in `i18n/<locale>/*.json`, the only folder `platform-core/extension-services/locales.js` scans).
 - **integration-tests** — Selenide-based UI and API integration tests against the assembled application.
+
+## Dirigible version
+
+The Dirigible version is **not** declared here: `codbex-platform-parent` pins it through the `dirigible.version` property, and parent releases track Dirigible releases 1:1 (parent 14.17.0 -> Dirigible 14.17.0). Bumping the edition therefore means bumping the parent version in the root `pom.xml`. A child pom *can* override `dirigible.version` to reach a Dirigible release whose parent is not published yet, but prefer the parent bump.
+
+Bumps are not always mechanical - Dirigible removes things:
+
+- **The OData engine was extracted in 14.16.0.** `dirigible-dependencies` stopped managing `com.codbex.olingo:olingo-odata2-lib`, so the version-less declaration in the root pom failed the build at model-read time, and the CXF / `javax.validation` / `javax.servlet` exclusions on `group-engines` became dead weight (verified with `dependency:tree`). Both were removed.
+- **The AngularJS and TypeScript application templates were removed in 14.16.0**, along with the AngularJS form-builder generator. Because Atlas depends on `group-templates` as a whole rather than on individual templates, nothing had to change here - but an edition that names templates one by one would break.
+- **`/` now lands on the Home launchpad** (`resources-home`), which carries no IDE perspectives: IDE assertions must go through `ide.openIde()`.
+
+Since Atlas is the all-in-one edition and depends on the `group-*` aggregators wholesale, a version bump picks up new components automatically - the Intent Driven engine and editor, the Builder and Monitoring shells, the Harmonia + client-Java application stack, document printing and numbering all arrive that way.
 
 ## Configuration model
 
