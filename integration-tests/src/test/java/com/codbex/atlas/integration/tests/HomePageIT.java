@@ -15,11 +15,27 @@ import org.junit.jupiter.api.Test;
 
 class HomePageIT extends AtlasIntegrationTest {
 
+    /**
+     * Static copy on the Home landing page - deterministic, unlike the user-dependent greeting.
+     */
+    private static final String HOME_LANDING_TAGLINE = "Everything starts here. Pick where you want to work today.";
+
+    /**
+     * The root path lands on the Home launchpad, which carries no IDE perspectives - the Workbench
+     * welcome view is asserted separately.
+     */
     @Test
-    void testOpenHomepage() {
+    void testOpenHomePage() {
         ide.openHomePage();
 
         browser.assertElementExistsByTypeAndText(HtmlElementType.SPAN, "Atlas");
+        browser.assertElementExistsByTypeAndText(HtmlElementType.PARAGRAPH, HOME_LANDING_TAGLINE);
+    }
+
+    @Test
+    void testOpenWorkbench() {
+        ide.openIde();
+
         browser.assertElementExistsByTypeAndText(HtmlElementType.HEADER3, "Welcome to Atlas");
     }
 }
