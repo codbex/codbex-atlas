@@ -11,6 +11,7 @@
 package com.codbex.atlas.integration.tests;
 
 import org.eclipse.dirigible.integration.tests.api.SecurityIT;
+import org.eclipse.dirigible.integration.tests.api.camel.*;
 import org.eclipse.dirigible.integration.tests.api.java.db.SchemaExportImportIT;
 import org.eclipse.dirigible.integration.tests.api.java.messaging.MessagingFacadeIT;
 import org.eclipse.dirigible.integration.tests.api.javascript.cms.CmsSuiteIT;
