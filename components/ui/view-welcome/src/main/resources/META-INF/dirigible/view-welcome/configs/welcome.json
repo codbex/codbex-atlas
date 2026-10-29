@@ -1,0 +1,8 @@
+{
+    "id": "welcome",
+    "label": "Welcome",
+    "factory": "frame",
+    "lazyLoad": true,
+    "region": "center",
+    "path": "/services/web/view-welcome/welcome.html"
+}
